@@ -50,7 +50,7 @@ class Server:
         end_index = start_index + page_size
         dataset = list(data.values())[start_index:end_index]
 
-        next_index = None if end_index >= len(data) else end_index
+        next_index = end_index if end_index < len(data) else None
 
         return {
             'index': start_index,
