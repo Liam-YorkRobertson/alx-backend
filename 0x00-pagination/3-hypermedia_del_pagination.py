@@ -43,7 +43,8 @@ class Server:
         """Retrieves information about a page
         """
         data = self.indexed_dataset()
-        assert index is None or (0 <= index <= max(data.keys())), "Invalid index"
+        assert index is None or (0 <= index <= max(data.keys())), "I"
+        "nvalid index"
 
         start_index = index or 0
         end_index = start_index + page_size
@@ -53,7 +54,7 @@ class Server:
 
         return {
             'index': start_index,
-            'page_size': len(dataset),
             'data': dataset,
+            'page_size': len(dataset),
             'next_index': next_index
         }
