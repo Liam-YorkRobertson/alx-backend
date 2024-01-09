@@ -13,16 +13,16 @@ class Config:
     """
     config for lang and time
     """
-    DEBUG = True
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
 app.config.from_object(Config)
+app.url_map.strict_slashes = False
 
 
-def get_locale():
+def get_locale() -> str:
     """
     get best match with supported languages
     """
@@ -30,7 +30,7 @@ def get_locale():
 
 
 @app.route('/')
-def index():
+def index() -> str:
     """
     route for the index page
     """
