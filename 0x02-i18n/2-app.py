@@ -13,6 +13,7 @@ class Config:
     """
     config for lang and time
     """
+    DEBUG = True
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -33,8 +34,8 @@ def index():
     """
     route for the index page
     """
-    return render_template('2-index.html',)
+    return render_template('2-index.html')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
