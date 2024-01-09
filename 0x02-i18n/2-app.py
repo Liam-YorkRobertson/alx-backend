@@ -19,10 +19,9 @@ class Config:
 
 
 app.config.from_object(Config)
-app.url_map.strict_slashes = False
 
 
-def get_locale() -> str:
+def get_locale():
     """
     get best match with supported languages
     """
@@ -30,7 +29,7 @@ def get_locale() -> str:
 
 
 @app.route('/')
-def index() -> str:
+def index():
     """
     route for the index page
     """
