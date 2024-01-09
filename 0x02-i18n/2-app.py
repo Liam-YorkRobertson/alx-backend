@@ -21,7 +21,7 @@ class Config:
 app.config.from_object(Config)
 
 
-def get_locale():
+def get_locale() -> str:
     """
     get best match with supported languages
     """
