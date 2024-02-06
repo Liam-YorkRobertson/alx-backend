@@ -1,0 +1,1 @@
+In this repository we are going to be working with redis, kue, and javascript to create a queuing system
