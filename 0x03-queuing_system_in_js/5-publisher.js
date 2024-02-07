@@ -1,3 +1,5 @@
+// copied 4, publishes to subscribers
+
 import redis from 'redis';
 
 const client = redis.createClient();
